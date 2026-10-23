@@ -1,0 +1,5 @@
+# dsh-pushups bundle patch: one Host row. Its Client half is mounted by the
+# Web app through `dsh.client` in package.json.
+- insert:
+    - id: pushups
+      name: dsh-pushups

@@ -1,0 +1,54 @@
+{
+  "name": "dsh-pushups",
+  "version": "0.1.0",
+  "description": "Counts the messages you send to DeepSeek Harness and turns them into a push-up debt you pay off when you stand up. Web GUI plugin with a composer-dock counter, partial payments, streak and English/Russian/Chinese UI.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "icon": "./icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "pushups",
+    "fitness",
+    "i18n"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanlebedvideo/dsh-pushups.git"
+  },
+  "homepage": "https://github.com/ivanlebedvideo/dsh-pushups#readme",
+  "bugs": {
+    "url": "https://github.com/ivanlebedvideo/dsh-pushups/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
