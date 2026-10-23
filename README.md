@@ -1,5 +1,7 @@
 # dsh-pushups
 
+![One prompt = one push-up. Vibe code now, pay in push-ups later.](assets/cover.png)
+
 A small [DeepSeek Harness](https://github.com/deepseek-ai) (DSH) plugin for the **Web GUI**:
 every message you send to the assistant becomes **one push-up of debt**. When you stand up
 from the computer, you pay the debt off — in one set or in parts.
