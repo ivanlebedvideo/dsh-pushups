@@ -1,6 +1,6 @@
 {
   "name": "dsh-pushups",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Counts the messages you send to DeepSeek Harness and turns them into a push-up debt you pay off when you stand up. Web GUI plugin with a composer-dock counter, partial payments, streak and English/Russian/Chinese UI.",
   "type": "module",
   "exports": {
@@ -49,6 +49,7 @@
     "url": "https://github.com/ivanlebedvideo/dsh-pushups/issues"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
   }
 }
