@@ -2,12 +2,32 @@
 
 ![One prompt = one push-up. Vibe code now, pay in push-ups later.](assets/cover.png)
 
-A small [DeepSeek Harness](https://github.com/deepseek-ai) (DSH) plugin for the **Web GUI**:
-every message you send to the assistant becomes **one push-up of debt**. When you stand up
-from the computer, you pay the debt off — in one set or in parts.
+**Typing is not cardio.** It just has better marketing.
 
-The point is not statistics. The point is that the number sits under the composer the whole
-time, grows when you talk instead of moving, and refuses to disappear on its own.
+`dsh-pushups` is a small [DeepSeek Harness](https://github.com/deepseek-ai) (DSH) plugin for the
+**Web GUI**: every message you send to the assistant becomes **one push-up of debt**. Stand up,
+do the set, pay it off — in one go or in parts.
+
+## Why this exists
+
+You are a mammal running a chat interface. Around hour six of "just one more prompt" your spine
+has quietly become a Jenga tower with a deadline, your legs have filed for remote work, and
+"I'll stretch in a minute" has been in the backlog since Tuesday.
+
+Here's the trap: talking to a machine *feels* like doing something. The tokens stream, the diff
+appears, the dopamine lands — and none of it requires your body. So the body gets the leftovers:
+the stiff neck, the 4 PM fog, the vague memory of having shoulders.
+
+The usual remedies all lost to a notification that says "later". Later is not a time. Later is
+where good intentions go to be archived.
+
+So the deal is stupid on purpose: **one prompt = one push-up.** Not a workout plan, not a
+wellness journey — a number under the composer that grows every time you write to an AI instead
+of moving your own body. When it gets annoying enough, you get up. That's the whole mechanism.
+
+It will not fix your posture. It will make it slightly less fictional.
+
+> Physics doesn't read intentions. Gravity is the only reviewer that never leaves "looks good to me".
 
 ```
 ┌──────────────────────────────────────────────┐
