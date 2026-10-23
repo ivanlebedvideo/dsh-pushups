@@ -45,6 +45,7 @@ window.__ModuleLoader__.load({
         error: 'Something went wrong: {error}',
         paidOne: 'paid',
         noDebt: 'All paid off',
+        payAll: 'Pay off the debt',
       },
       ru: {
         badge: 'Отжимания',
@@ -74,6 +75,7 @@ window.__ModuleLoader__.load({
         error: 'Что-то пошло не так: {error}',
         paidOne: 'оплачено',
         noDebt: 'Всё закрыто',
+        payAll: 'Закрыть долг',
       },
       zh: {
         badge: '俯卧撑',
@@ -103,6 +105,7 @@ window.__ModuleLoader__.load({
         error: '出错了：{error}',
         paidOne: '已做',
         noDebt: '已全部结清',
+        payAll: '结清欠账',
       },
     }
 
@@ -187,6 +190,21 @@ window.__ModuleLoader__.load({
         h('rect', { x: 1, y: 5.5, width: 3, height: 5, rx: 1, fill: 'currentColor' }),
         h('rect', { x: 12, y: 5.5, width: 3, height: 5, rx: 1, fill: 'currentColor' }),
         h('rect', { x: 4.5, y: 7, width: 7, height: 2, rx: 1, fill: 'currentColor' }),
+      )
+    }
+
+    function Check() {
+      return h(
+        'svg',
+        { width: 13, height: 13, viewBox: '0 0 16 16', 'aria-hidden': true, style: { display: 'block' } },
+        h('path', {
+          d: 'M3 8.5 6.2 12 13 4.5',
+          fill: 'none',
+          stroke: 'currentColor',
+          strokeWidth: 2,
+          strokeLinecap: 'round',
+          strokeLinejoin: 'round',
+        }),
       )
     }
 
@@ -538,10 +556,34 @@ window.__ModuleLoader__.load({
         error ? h('span', { style: { color: TOKENS.error, fontSize: 11 } }, '!') : null,
       )
 
+      const quickPay =
+        state && debt > 0
+          ? h(
+              'button',
+              {
+                type: 'button',
+                disabled: busy,
+                onClick: () => onPay(debt),
+                title: `${t('payAll')}: ${debt}`,
+                'aria-label': `${t('payAll')}: ${debt}`,
+                style: {
+                  ...chipStyle,
+                  width: 22,
+                  padding: 0,
+                  justifyContent: 'center',
+                  color: TOKENS.success,
+                  borderColor: TOKENS.success,
+                  opacity: busy ? 0.5 : 1,
+                },
+              },
+              h(Check),
+            )
+          : null
+
       return h(
         React.Fragment,
         null,
-        chip,
+        h('span', { style: { display: 'inline-flex', alignItems: 'center', gap: 6 } }, chip, quickPay),
         open
           ? h(Dialog, { t, lang, state, onLang, onPay, onReset, onClose, busy, error })
           : null,

@@ -21,6 +21,9 @@ Click the chip, and a dialog shows the lifetime message count, the unpaid debt, 
 days closed without debt, recent payments, partial-payment buttons (`+5`, `+10`, `+25`, all),
 a custom amount, and a language switch (English / Русский / 中文 — English by default).
 
+Next to the chip sits a one-click ✓ button: when you have already done the push-ups, it pays
+the whole debt without opening anything. The dialog stays for the details.
+
 ## What counts
 
 One admitted human prompt: a session event `user/message` whose source is
